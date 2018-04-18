@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Pipeline Chart</title>
+    <script src="analytics-endpoint.js"></script>
+    <script>
+        window.onload = function () {
+            PluginEndpoint.onInit(function (initialData, _transport) {
+                document.getElementById("title").innerHTML = "Pipeline Chart";
+                document.getElementById("content").innerHTML = initialData;
+            });
+
+            PluginEndpoint.ensure("v1");
+        }
+    </script>
+</head>
+<body>
+<div id="chart-container">
+    <div id="title"></div>
+    <div id="content"></div>
+</div>
+</body>
+</html>
