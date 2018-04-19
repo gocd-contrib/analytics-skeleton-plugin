@@ -4,12 +4,12 @@
     <script src="analytics-endpoint.js"></script>
     <script>
         window.onload = function () {
-            PluginEndpoint.onInit(function (initialData, _transport) {
+            AnalyticsEndpoint.onInit(function (initialData, _transport) {
                 document.getElementById("title").innerHTML = "Pipeline Chart";
                 document.getElementById("content").innerHTML = initialData;
             });
 
-            PluginEndpoint.ensure("v1");
+            AnalyticsEndpoint.ensure("v1");
         }
     </script>
 </head>

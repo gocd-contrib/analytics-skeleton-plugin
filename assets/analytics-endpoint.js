@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 /* A stub for the plugin endpoint which will be available at runtime. */
-var PluginEndpoint = function PluginEndpoint() {
+var AnalyticsEndpoint = function AnalyticsEndpoint() {
     return {
         ensure: function ensure() {},
         on: function on() {},
@@ -15,4 +15,4 @@ var PluginEndpoint = function PluginEndpoint() {
     };
 };
 
-exports.default = new PluginEndpoint();
+exports.default = new AnalyticsEndpoint();
