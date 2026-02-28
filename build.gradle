@@ -41,7 +41,6 @@ tasks.withType(JavaCompile).configureEach {
     options.release = 17
 }
 
-// In this section you declare where to find the dependencies of your project
 repositories {
     mavenCentral()
     mavenLocal()
@@ -49,7 +48,9 @@ repositories {
 
 dependencies {
     compileOnly "cd.go.plugin:go-plugin-api:${project.pluginDesc.goCdVersion}"
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation('com.google.code.gson:gson:2.13.2') {
+        exclude(module: 'error_prone_annotations') // Not needed at runtime
+    }
     implementation 'com.google.guava:guava:23.0'
     implementation 'org.apache.commons:commons-lang3:3.8.1'
     implementation 'commons-io:commons-io:2.6'
