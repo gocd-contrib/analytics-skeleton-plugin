@@ -51,10 +51,9 @@ dependencies {
     implementation('com.google.code.gson:gson:2.13.2') {
         exclude(module: 'error_prone_annotations') // Not needed at runtime
     }
-    implementation 'com.google.guava:guava:23.0'
+    implementation 'com.google.guava:guava:33.7.2-jre'
     implementation 'org.apache.commons:commons-lang3:3.8.1'
     implementation 'commons-io:commons-io:2.6'
-
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-core:2.23.0'
     testImplementation 'org.hamcrest:hamcrest:2.2'
